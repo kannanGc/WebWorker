@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Web Workers basic example</title>
+ 
+  <style>
+
+    .box{
+          padding: 30px;
+    border: 1px solid grey;
+    box-shadow: 6px 11px 1px #9b312cb0;
+    width: 70%;
+    margin: 40px auto;
+    }
+    .center{
+      text-align: center;
+    }
+    .txtHeading{
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .inputBox{
+      margin-bottom: 5px;
+    }
+  </style>
+ 
+  </head>
+
+  <body>
+    <div class="center">Web Workers </div>
+
+    <div class="holder">
+
+      <div class="calculator box">
+        <div class="txtHeading">Lucky Number for you!</div>
+        <input type="button" value="Click me" id="clickMe">
+        <div class="result"></div>
+      </div>
+      <div class="heavyCalculations box">
+          <div class="txtHeading"> Heavy Calculations in Main thread </div>
+          <input type="number" class="inputBox" id="number1">
+          <input type="button" id="mainThread" value="Perform Operation">
+          <div class="resultHeavyCalculations"></div>
+      </div>
+      <div class="heavyCalculationsWorker box">
+          <div class="txtHeading"> Heavy Calculations in Separate thread </div>
+          <input type="number" class="inputBox" id="number2">
+          <input type="button" id="separateThread" value="Perform Operation">
+          <div class="resultHeavyCalculationsWorker"></div>
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
